@@ -1,10 +1,9 @@
 'use client'
 
-import Image from "next/image";
 import styles from './style.module.css'
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { useMedia } from "@/shared/hooks/useMedia";
+import { useMedia } from "@/shared/presentation/hooks/useMedia";
 
 export function Header() {
   const [mobileIsOpen, setMobileIsOpen] = useState(false)
@@ -40,17 +39,21 @@ export function Header() {
 
   return (
     <header ref={headerRef} className={styles.header}>
-      <Link href="/">
-        <Image
-          src="/images/logo.png"
-          width={105}
-          height={110}
-          alt="Erivelton Sousa"
-        />
+      <Link className={styles.header__logo} href="/">
+        <picture>
+          <img
+            src="https://i.postimg.cc/TwY74D31/profile-pic-8.png"
+            width={50}
+            height={50}
+            alt="Erivelton Sousa"
+          />
+        </picture>
+
+        <div>Erivelton Sousa</div>
       </Link>
 
       <nav className={styles.nav}>
-        <div className={`${styles.hamburger} ${mobileIsOpen ? styles.open : ''}`} onClick={() => setMobileIsOpen(prevState => !prevState)}>
+        <div className={`${styles.header__hamburger_menu} ${mobileIsOpen ? styles['--active'] : ''}`} onClick={() => setMobileIsOpen(prevState => !prevState)}>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>
           <span className={styles.bar}></span>

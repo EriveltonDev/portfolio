@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Roboto } from "next/font/google";
-import "./globals.css";
+import "../shared/styles/reset.css";
+import "../shared/styles/theme.css";
+import { ThemeToggle } from "@/shared/presentation/components/theme-toggle";
 
 const roboto = Roboto({
   variable: "--roboto",
@@ -29,6 +31,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${roboto.variable} ${poppins.variable}`}>
         {children}
+        <ThemeToggle />
       </body>
     </html>
   );

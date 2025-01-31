@@ -1,0 +1,55 @@
+:root {
+  /* Light Theme */
+  --light-primary: #2E7D32;       /* Verde escuro principal */
+  --light-primary-hover: #1B5E20; /* Verde mais escuro para hover */
+  --light-primary-active: #004D40;/* Verde profundo para active */
+  --light-background: #FFFFFF;    /* Fundo branco */
+  --light-surface: #F5F5F5;       /* Superfície clara */
+  --light-surface-alt: #E0E0E0;  /* Cinza médio para variação */
+  --light-text: #212121;          /* Texto escuro */
+  --light-text-secondary: #757575;/* Texto secundário */
+
+  /* Dark Theme */
+  --dark-primary: #4CAF50;        /* Verde vibrante para dark mode */
+  --dark-primary-hover: #66BB6A;  /* Verde mais claro para hover */
+  --dark-primary-active: #388E3C; /* Verde mais escuro para active */
+  --dark-background: #121212;     /* Fundo escuro */
+  --dark-surface: #1E1E1E;        /* Superfície escura */
+  --dark-surface-alt: #2A2A2A;   /* Cinza escuro mais suave para variação */
+  --dark-text: #FFFFFF;           /* Texto branco */
+  --dark-text-secondary: #BDBDBD; /* Texto secundário claro */
+
+  /* Cores comuns */
+  --success: #4CAF50;             /* Verde para sucesso */
+  --warning: #FFC107;             /* Âmbar para avisos */
+  --error: #D32F2F;               /* Vermelho para erros */
+  --info: #2196F3;                /* Azul para informações */
+}
+
+/* Classes para light theme */
+[data-theme="light"] {
+  --color-primary: var(--light-primary);
+  --color-primary-hover: var(--light-primary-hover);
+  --color-primary-active: var(--light-primary-active);
+  --background: var(--light-background);
+  --surface: var(--light-surface);
+  --surface-alt: var(--light-surface-alt);
+  --text: var(--light-text);
+  --text-secondary: var(--light-text-secondary);
+}
+
+/* Classes para dark theme */
+[data-theme="dark"] {
+  --color-primary: var(--dark-primary);
+  --color-primary-hover: var(--dark-primary-hover);
+  --color-primary-active: var(--dark-primary-active);
+  --background: var(--dark-background);
+  --surface: var(--dark-surface);
+  --surface-alt: var(--dark-surface-alt);
+  --text: var(--dark-text);
+  --text-secondary: var(--dark-text-secondary);
+}
+
+body {
+  background-color: var(--background);
+}

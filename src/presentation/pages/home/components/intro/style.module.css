@@ -1,0 +1,23 @@
+.intro {
+  background-color: var(--surface-alt);
+  height: calc(100vh - 118px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .intro__content {
+    margin-top: -118px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+}
