@@ -17,6 +17,7 @@
     font-size: 1.2rem;
     text-decoration: none;
     font-weight: bold;
+    white-space: nowrap;
 
     &:hover {
       color: var(--color-primary);
@@ -84,10 +85,10 @@
 
 @media(width <= 1042px) {
   .header {
-    padding: 10px 30px;
+    padding: 30px 15px;
   }
 
-  .hamburger {
+  .header__hamburger_menu {
     display: flex;
   }
 
