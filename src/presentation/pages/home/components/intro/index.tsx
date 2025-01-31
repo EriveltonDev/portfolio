@@ -4,7 +4,7 @@ export function Intro() {
   return (
     <section className={styles.intro}>
       <div className={styles.intro__content}>
-          <h2>
+          <h2 className={styles.intro__title}>
             Hey, I am Erivelton Sousa
           </h2>
 
